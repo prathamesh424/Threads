@@ -6,6 +6,7 @@ import { BiLogOut } from "react-icons/bi";
 import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { SiPersonio } from "react-icons/si";
+import Image from "next/image";
  
 
 
@@ -34,8 +35,15 @@ function Navbar() {
   return (
     <nav className="fixed top-0 z-30 w-full  bg-color2 px-6 py-3 flex justify-between items-center p-4">
       <Link href="/" className="flex items-center gap-4">
-        <SiPersonio className="text-3xl text-primary_text font-extrabold border-4 border-theme_text h-10 w-10 p-1 rounded-xl text-heading1-bold" onClick={toggleTheme}/>
-        <p className="text-heading3-bold text-primary_text max-xs:hidden">Stringz</p>
+          <Image
+            src='/images/headLogo.svg'
+            alt='logo'
+            width={24}
+            height={24}
+            className='cursor-pointer object-contain'
+            />
+        {/* <SiPersonio className="text-3xl text-primary_text font-extrabold border-4 border-theme_text h-10 w-10 p-1 rounded-xl text-heading1-bold" onClick={toggleTheme}/> */}
+        <p className="text-heading3-bold text-primary_text max-xs:hidden">Threads</p>
       </Link>
 
       <div className="flex items-center gap-4">

@@ -10,7 +10,7 @@ import Navbar from '@/components/component/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Stringz",
+  title: "Threads",
   description: " ",
   keywords: "tweet, social media, Next.js , post , ",
 };
