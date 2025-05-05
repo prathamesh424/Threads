@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 80px;
+}
+
+ ::-webkit-scrollbar-track {
+  background: #222a35;
+}
+
+ ::-webkit-scrollbar-thumb {
+  background: #575c66;
+  border-radius: 6px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+  background: #626970;
+}
+
+::-webkit-backdrop-filter {
+  blur: 3px saturate(106%);
+}
+
+
+@layer components {
+  .pagination {
+    @apply mt-10 flex w-full items-center justify-center gap-5;
+  }
+}
+
+@layer utilities {
+  .css-invert {
+    @apply invert-[50%] brightness-200;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+}
+
+/* Clerk Responsive */
+.cl-organizationSwitcherTrigger .cl-userPreview .cl-userPreviewTextContainer {
+  @apply max-sm:hidden;
+}
+
+.cl-organizationSwitcherTrigger
+  .cl-organizationPreview
+  .cl-organizationPreviewTextContainer {
+  @apply max-sm:hidden;
+}
+
+/* Shadcn Component Styles */
+ 
+.tab {
+  @apply flex min-h-[50px] flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
+}
+
+.no-focus {
+  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+}
+ 
+.account-form_image-label {
+  @apply flex h-24 w-24 items-center justify-center rounded-full bg-dark-4 !important;
+}
+
+.account-form_image-input {
+  @apply cursor-pointer border-none bg-transparent outline-none file:text-blue !important;
+}
+
+.account-form_input {
+  @apply border border-dark-4 bg-dark-3 text-light-1 !important;
+}
+ 
+.comment-form {
+  @apply mt-10 flex items-center gap-4 border-y border-y-dark-4 py-5 max-xs:flex-col !important;
+}
+
+.comment-form_btn {
+  @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+}
+
+
+/* theme Toggle:- */
+
+.light {
+  --background: 245, 245, 245;
+  --color1: 255, 255, 255;
+  --color2: 239, 239, 239;
+  --color3: 120, 120, 163;
+  --color4: 92, 92, 123;
+
+  --primary-text: 0 , 0 ,0 ;
+  --theme-color : 255, 182, 32  ;
+  --anti-theme-color : 135, 126, 255;
+  
+  background: rgba(var(--background));
+}
+
+.dark {
+  --background: 0, 0, 0;
+  --color1: 0, 0, 0;
+  --color2: 31, 31, 34;
+  --color3: 16, 16, 18;
+  --color4: 31, 31, 34;
+  --theme-color : 135, 126, 255 ;
+  --primary-text: 255 , 255 , 255 ;
+  --anti-theme-color : 255, 182, 32  ;
+
+  background: rgba(var(--background));
+}
